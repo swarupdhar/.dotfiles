@@ -1,0 +1,54 @@
+@define-color base #191724;
+@define-color overlay #26233a;
+@define-color primary-text #e0def4;
+@define-color secondary-text #ebbcba;
+@define-color background-one #31748f;
+@define-color background-two #c4a7e7;
+@define-color background-three #908caa;
+@define-color highlight-one #c4a7e7;
+@define-color highlight-two #f6c177;
+@define-color highlight-three #31748f;
+@define-color active #ea9a97;
+
+
+* {
+    border: none;
+}
+
+window {
+    font-size: 16px;
+    font-family: "Iosevka Nerd Font";
+    background-color: @overlay;
+}
+
+#entry {
+    background-color: @overlay;
+    color: @primary-text;
+    padding: 0.75em;
+}
+
+#entry:selected {
+    background-color: @active;
+    color: @primary-text;
+}
+
+#entry:selected #text {
+    background-color: @active;
+}
+
+#inner-box {
+    background-color: none;
+    border: 1px solid @base;
+}
+
+#input {
+    background-color: @overlay;
+    color: @primary-text;
+    padding: 0.75em;
+}
+
+image {
+    background-color: transparent;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}

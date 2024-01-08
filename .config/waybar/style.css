@@ -1,0 +1,129 @@
+@define-color base #191724;
+@define-color overlay #26233a;
+@define-color primary-text #e0def4;
+@define-color secondary-text #ebbcba;
+@define-color background-one #31748f;
+@define-color background-two #c4a7e7;
+@define-color background-three #908caa;
+@define-color highlight-one #c4a7e7;
+@define-color highlight-two #f6c177;
+@define-color highlight-three #31748f;
+@define-color active #ea9a97;
+
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: FontAwesome, Roboto, sans-serif;
+    font-size: 12px;
+    min-height: 0px;
+}
+
+window#waybar {
+    background: @base;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    color: @primary-text-color;
+}
+
+.modules-left {
+    background-color: @overlay;
+    border-radius: 16px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 0px 5px;
+}
+
+.modules-right {
+    background-color: @overlay;
+    border-radius: 16px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0px 5px;
+}
+
+.modules-center {
+    background-color: transparent;
+    padding: 0px 24px;
+}
+
+#window {
+    font-weight: bold;
+    background-color: transparent;
+    color: @active;
+    min-width: 0px;
+    margin: 5px 3px;
+}
+
+#workspaces {
+    background-color: transparent;
+    margin: 5px 0px;
+    padding: 0px 0px;
+    border-radius: 16px;
+}
+
+#workspaces button {
+    color: @primary-text;
+    padding: 0px 5px;
+    border-radius: 16px;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @active;
+}
+
+#workspaces button.focused {
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
+    background-color: transparent;
+    color: @primary-text;
+    padding: 0px 8px;
+    margin: 5px 3px;
+    border-radius: 15px;
+}
+
+#cpu {
+    color: @highlight-one;
+}
+
+#memory {
+    color: @highlight-one;
+}
+
+#pulseaudio {
+    color: @highlight-three;
+}
+
+#network {
+    color: @highlight-two;
+}
+
+#battery {
+    color: @highlight-two;
+}
+
+#clock {
+    color: white;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    background: #f53c3c;
+}
