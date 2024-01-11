@@ -13,6 +13,8 @@ pacman -S --needed \
 	zathura \
 	zathura-pdf-poppler \
 	waybar \
+    swayidle \
+    swaylock \
 	wofi \
 	dunst \
 	wl-clipboard \
