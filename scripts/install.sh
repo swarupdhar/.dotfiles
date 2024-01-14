@@ -25,6 +25,17 @@ pacman -S --needed \
     qt5-graphicaleffects \
     qt5-quickcontrols2 \
     qt5-svg \
+    xdg-user-dirs
+
+# user dirs
+mkdir $HOME/downloads
+mkdir $HOME/music
+mkdir $HOME/pictures
+mkdir $HOME/public
+mkdir $HOME/templates
+mkdir $HOME/videos
+
+xdg-user-dirs-update
 
 # download rose pine theme
 wget https://github.com/rose-pine/gtk/releases/download/v2.1.0/gtk3.tar.gz -P /tmp
