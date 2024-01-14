@@ -20,6 +20,7 @@ pacman -S --needed \
 	wl-clipboard \
 	ttf-iosevkaterm-nerd \
 	ttf-noto-nerd \
+    noto-fonts-emoji \
 	pavucontrol
 
 # download rose pine theme

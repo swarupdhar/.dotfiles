@@ -1,4 +1,3 @@
-timeout 600 'swaylock -f'
-timeout 630 'hyprctl dispatch dpms off'
-resume 'hyprctl dispatch dpms on'
+timeout 1800 'swaylock -e -f -i /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/background.png'
+timeout 1860 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
 before-sleep 'swaylock -e -f -i /usr/share/sddm/themes/sddm-astronaut-theme/Backgrounds/background.png'
