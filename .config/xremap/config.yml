@@ -1,0 +1,7 @@
+keymap:
+  - name: chrome tab navigation
+    application:
+      only: Google-chrome
+    remap:
+      C-ALT-H: C-SHIFT-TAB
+      C-ALT-L: C-TAB

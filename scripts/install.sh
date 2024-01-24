@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
 
 pacman -S --needed \
     git \
@@ -25,7 +24,12 @@ pacman -S --needed \
     qt5-graphicaleffects \
     qt5-quickcontrols2 \
     qt5-svg \
-    xdg-user-dirs
+    xdg-user-dirs \
+    texlive-mathscience \
+    texlive-binextra \
+    texlive-latexextra \
+    texlive-latexrecommended \
+    texlive-fontsextra
 
 # user dirs
 mkdir $HOME/downloads
@@ -62,3 +66,12 @@ git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/t
 cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
 echo "[Theme]
 Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+
+# set up xremap
+cd ~
+git clone https://aur.archlinux.org/xremap-x11-bin.git
+cd xremap-x11-bin/
+makepkg
+pacman -U xremap-x11-bin-0.8.14-1-x86_64.pkg.tar.zst 
+echo "uinput" | sudo tee /etc/modules-load.d/uinput.conf
+echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
