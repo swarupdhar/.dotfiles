@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -e
 
 pacman -S --needed \
     git \
@@ -67,11 +68,11 @@ cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
 echo "[Theme]
 Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
+# install rust
+curl https://sh.rustup.rs -sSf | sh
+
 # set up xremap
-cd ~
-git clone https://aur.archlinux.org/xremap-x11-bin.git
-cd xremap-x11-bin/
-makepkg
-pacman -U xremap-x11-bin-0.8.14-1-x86_64.pkg.tar.zst 
-echo "uinput" | sudo tee /etc/modules-load.d/uinput.conf
+cargo install xremap --features wlroots
+echo uinput | sudo tee /etc/modules-load.d/uinput.conf
 echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
+
