@@ -1,7 +1,17 @@
 keymap:
   - name: chrome tab navigation
     application:
-      only: Google-chrome
+      only: google-chrome
     remap:
       C-ALT-H: C-SHIFT-TAB
       C-ALT-L: C-TAB
+      ALT-J: DOWN
+      ALT-K: UP
+  - name: firefox tab navigation
+    application:
+      only: firefox
+    remap:
+      C-ALT-H: C-SHIFT-TAB
+      C-ALT-L: C-TAB
+      ALT-J: DOWN
+      ALT-K: UP
