@@ -15,7 +15,7 @@
     border: none;
     border-radius: 0px;
     font-family: FontAwesome, Roboto, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     min-height: 0px;
 }
 
@@ -58,19 +58,21 @@ window#waybar {
 #workspaces {
     background-color: transparent;
     margin: 5px 0px;
-    padding: 0px 0px;
+    padding: 0px 5px;
     border-radius: 16px;
 }
 
 #workspaces button {
-    color: @primary-text;
-    padding: 0px 5px;
-    border-radius: 16px;
-    background: transparent;
+    color: white;
+    padding: 0px 1px;
+    margin: 0px 3px;
+    border-radius: 100%;
+    background: @background-three;
 }
 
 #workspaces button.active {
-    color: @active;
+    background: @active;
+    color: black;
 }
 
 #workspaces button.focused {
