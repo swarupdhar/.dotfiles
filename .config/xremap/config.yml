@@ -1,5 +1,5 @@
 keymap:
-  - name: chrome tab navigation
+  - name: chrome navigation
     application:
       only: google-chrome
     remap:
@@ -7,7 +7,7 @@ keymap:
       C-ALT-L: C-TAB
       ALT-J: DOWN
       ALT-K: UP
-  - name: firefox tab navigation
+  - name: firefox navigation
     application:
       only: firefox
     remap:
@@ -15,3 +15,5 @@ keymap:
       C-ALT-L: C-TAB
       ALT-J: DOWN
       ALT-K: UP
+      ALT-H: LEFT
+      ALT-L: RIGHT
