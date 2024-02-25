@@ -21,6 +21,9 @@ pacman -S --needed \
 	ttf-iosevkaterm-nerd \
 	ttf-noto-nerd \
     noto-fonts-emoji \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-extra \
 	pavucontrol \
     qt5-graphicaleffects \
     qt5-quickcontrols2 \
