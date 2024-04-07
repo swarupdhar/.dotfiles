@@ -79,3 +79,5 @@ cargo install xremap --features wlroots
 echo uinput | sudo tee /etc/modules-load.d/uinput.conf
 echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
 
+# set execute permission for other scripts
+chmod +x ~/scripts/volume.sh
