@@ -32,7 +32,7 @@
     progress_bar_height = 10
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 1
+    progress_bar_frame_width = 2
 
     # Set the minimum width for the progress bar
     progress_bar_min_width = 150
@@ -50,7 +50,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 0
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -63,11 +63,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 4
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa00"
-
+    frame_color = "#89b4fa"
     separator_color = frame
 
     # Sort messages by urgency.
@@ -167,24 +166,16 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#191724FF"
-    foreground = "#e0def4"
-    highlight = "#f6c177"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
     timeout = 3
-    # Icon for notifications with low urgency, uncomment to enable
-    #default_icon = /path/to/icon
 
 [urgency_normal]
-    timeout = 10
-    background = "#191724FF"
-    foreground = "#e0def4"
-    # Icon for notifications with normal urgency, uncomment to enable
-    #default_icon = /path/to/icon
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
 
 [urgency_critical]
-    background = "#191724FF"
-    foreground = "#f6c177"
-    frame_color = "#f6c177"
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+    frame_color = "#fab387"
     timeout = 0

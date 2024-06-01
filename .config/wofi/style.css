@@ -1,54 +1,69 @@
-@define-color base #191724;
-@define-color overlay #26233a;
-@define-color primary-text #e0def4;
-@define-color secondary-text #ebbcba;
-@define-color background-one #31748f;
-@define-color background-two #c4a7e7;
-@define-color background-three #908caa;
-@define-color highlight-one #c4a7e7;
-@define-color highlight-two #f6c177;
-@define-color highlight-three #31748f;
-@define-color active #ea9a97;
-
+@define-color rosewater         #f5e0dc;
+@define-color flamingo          #f2cdcd;
+@define-color pink              #f5c2e7;
+@define-color mauve             #cba6f7;
+@define-color red               #f38ba8;
+@define-color maroon            #eba0ac;
+@define-color peach             #fab387;
+@define-color yellow            #f9e2af;
+@define-color green             #a6e3a1;
+@define-color teal              #94e2d5;
+@define-color sky               #89dceb;
+@define-color sapphire          #74c7ec;
+@define-color blue              #89b4fa;
+@define-color lavender          #b4befe;
+@define-color text              #cdd6f4;
+@define-color subtext1          #bac2de;
+@define-color subtext0          #a6adc8;
+@define-color overlay2          #9399b2;
+@define-color overlay1          #7f849c;
+@define-color overlay0          #6c7086;
+@define-color surface2          #585b70;
+@define-color surface1          #45475a;
+@define-color surface0          #313244;
+@define-color base              #1e1e2e;
+@define-color mantle            #181825;
+@define-color crust             #11111b;
 
 * {
     border: none;
+    color: @subtext0;
 }
 
 window {
     font-size: 16px;
-    font-family: "Iosevka Nerd Font";
-    background-color: @overlay;
+    font-family: "JetBrains Nerd Font Mono";
+    background-color: @mantle;
 }
 
 #entry {
-    background-color: @overlay;
-    color: @primary-text;
-    padding: 0.75em;
+    border-radius: 0;
+    padding: 0.8em;
 }
 
 #entry:selected {
-    background-color: @active;
-    color: @primary-text;
+    border: none;
+    border-left: 2px solid @rosewater;
+    border-right: 2px solid @rosewater;
+    background-color: @surface0;
+    color: @subtext1;
 }
 
 #entry:selected #text {
-    background-color: @active;
-}
-
-#inner-box {
-    background-color: none;
-    border: 1px solid @base;
+    background-color: @surface0;
+    font-weight: bold;
 }
 
 #input {
-    background-color: @overlay;
-    color: @primary-text;
+    background-color: @mantle;
+    border-radius: 0;
     padding: 0.75em;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
 }
 
 image {
     background-color: transparent;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-right: 0.8em;
 }

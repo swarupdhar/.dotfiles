@@ -1,131 +1,86 @@
-@define-color base #191724;
-@define-color overlay #26233a;
-@define-color primary-text #e0def4;
-@define-color secondary-text #ebbcba;
-@define-color background-one #31748f;
-@define-color background-two #c4a7e7;
-@define-color background-three #908caa;
-@define-color highlight-one #c4a7e7;
-@define-color highlight-two #f6c177;
-@define-color highlight-three #31748f;
-@define-color active #ea9a97;
-
+@define-color rosewater         #f5e0dc;
+@define-color flamingo          #f2cdcd;
+@define-color pink              #f5c2e7;
+@define-color mauve             #cba6f7;
+@define-color red               #f38ba8;
+@define-color maroon            #eba0ac;
+@define-color peach             #fab387;
+@define-color yellow            #f9e2af;
+@define-color green             #a6e3a1;
+@define-color teal              #94e2d5;
+@define-color sky               #89dceb;
+@define-color sapphire          #74c7ec;
+@define-color blue              #89b4fa;
+@define-color lavender          #b4befe;
+@define-color text              #cdd6f4;
+@define-color subtext1          #bac2de;
+@define-color subtext0          #a6adc8;
+@define-color overlay2          #9399b2;
+@define-color overlay1          #7f849c;
+@define-color overlay0          #6c7086;
+@define-color surface2          #585b70;
+@define-color surface1          #45475a;
+@define-color surface0          #313244;
+@define-color base              #1e1e2e;
+@define-color mantle            #181825;
+@define-color crust             #11111b;
 
 * {
     border: none;
     border-radius: 0px;
-    font-family: FontAwesome, Roboto, sans-serif;
+    font-family: "JetBrains Nerd Font Mono", Roboto, sans-serif;
+    font-weight: bold;
     font-size: 16px;
-    min-height: 0px;
-}
-
-window#waybar {
-    background: @base;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-    color: @primary-text-color;
 }
 
 .modules-left {
-    background-color: @overlay;
-    border-radius: 16px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    padding: 0px 5px;
-}
-
-.modules-right {
-    background-color: @overlay;
-    border-radius: 16px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    padding: 0px 5px;
 }
 
 .modules-center {
-    background-color: transparent;
-    padding: 0px 24px;
+}
+
+.modules-right {
 }
 
 #window {
+    background-color: transparent;
+    color: @blue;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     font-weight: bold;
-    background-color: transparent;
-    color: @active;
-    min-width: 0px;
-    margin: 5px 3px;
-}
-
-#workspaces {
-    background-color: transparent;
-    margin: 5px 0px;
-    padding: 0px 5px;
-    border-radius: 16px;
 }
 
 #workspaces button {
-    color: white;
-    padding: 0px 1px;
-    margin: 0px 3px;
-    border-radius: 100%;
-    background: @background-three;
+    color: @text;
+    background: transparent;
 }
 
 #workspaces button.active {
-    background: @active;
-    color: black;
+    color: @rosewater;
 }
 
-#workspaces button.focused {
-}
-
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
+#clock, #battery, #cpu, #memory, #pulseaudio, #tray {
     background-color: transparent;
-    color: @primary-text;
-    padding: 0px 8px;
-    margin: 5px 3px;
-    border-radius: 15px;
-}
-
-#cpu {
-    color: @highlight-one;
-}
-
-#memory {
-    color: @highlight-one;
-}
-
-#pulseaudio {
-    color: @highlight-three;
-}
-
-#network {
-    color: @highlight-two;
+    margin-right: 1em;
+    color: @text;
 }
 
 #battery {
-    color: @highlight-two;
+    color: @green;
+}
+
+#cpu {
+    color: @red;
+}
+
+#memory {
+    color: @peach;
+}
+
+#pulseaudio {
+    color: @sapphire;
 }
 
 #clock {
-    color: white;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
-#battery.warning:not(.charging) {
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#network.disconnected {
-    background: #f53c3c;
+    color: @lavender;
 }
