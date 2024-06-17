@@ -56,7 +56,7 @@
 }
 
 #workspaces button.active {
-    color: @rosewater;
+    color: @maroon;
 }
 
 #clock, #battery, #cpu, #memory, #pulseaudio, #tray {
