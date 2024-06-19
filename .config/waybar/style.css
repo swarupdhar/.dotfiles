@@ -34,6 +34,7 @@
 }
 
 .modules-left {
+    padding: 8px;
 }
 
 .modules-center {
@@ -53,10 +54,14 @@
 #workspaces button {
     color: @text;
     background: transparent;
+    margin-right: 8px;
+    padding: 0px;
+    border-bottom: 3px solid transparent;
 }
 
 #workspaces button.active {
     color: @maroon;
+    border-bottom: 3px solid @maroon;
 }
 
 #clock, #battery, #cpu, #memory, #pulseaudio, #tray {
