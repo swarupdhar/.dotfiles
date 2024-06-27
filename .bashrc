@@ -20,4 +20,4 @@ PS1="\n$boldYellow\u $green(\s) $blue\w$white\n>> "
 alias ll='LC_COLLATE=c ls -alhF --color=always'
 alias ls='LC_COLLATE=c ls --color=always'
 alias grep='grep --color=auto'
-alias dots='/usr/bin/git --git-dir=/home/swarup/.dotfiles --work-tree=/home/swarup'
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
