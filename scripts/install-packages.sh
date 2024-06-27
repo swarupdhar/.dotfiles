@@ -42,15 +42,5 @@ pacman -Syu --needed \
     neovim \
     base-devel
 
-yay -S sddm-theme-catppuccin catppuccin-gtk-theme-mocha dracula-icons-git
-
-echo "[Theme]
-Current=catppuccin-macchiato" | sudo tee /etc/sddm.conf
-
-gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-lavender-standard+default-dark
-gsettings set org.gnome.desktop.interface icon-theme Dracula
-gsettings set org.gnome.desktop.wm.preferences theme catppuccin-mocha-lavender-standard+default-dark
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
 # Remove Dolphin
 pacman -Rns dolphin
